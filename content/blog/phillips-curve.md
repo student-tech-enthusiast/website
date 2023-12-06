@@ -64,7 +64,7 @@ Currently, the inflation data is in percentage, but we want to transform it into
 gen delta_inflation = inflation - inflation[_n-1]
 ```
 
-Serves to create a new variable called `delta_inflation`. This variable represents the change in inflation between consecutive time periods in the dataset. By using this command, you can measure the changes in inflation between time periods and analyze the trends or patterns of these changes in your Stata dataset.
+The above command creates a new variable called `delta_inflation`. This variable represents the change in inflation between consecutive time periods in the dataset. By using this command, you can measure the changes in inflation between time periods and analyze the trends or patterns of these changes in your Stata dataset.
 
 By using the `br` command, we can review our latest data:
 
