@@ -2,7 +2,7 @@
 external: false
 title: "A Time-Series Analysis of Inflation and Unemployment"
 description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
-date: 2022-11-02
+date: 2023-12-06
 ---
 
 By [Abdurrahman Fadhil](https://www.linkedin.com/in/rahmanfadhil/) and [Richita Hongo](https://www.linkedin.com/in/richita-hongo-0097b8251/)
@@ -134,7 +134,7 @@ The provided Stata syntax is a command for creating a two-dimensional graph, par
 
 ## Forecasting Inflation
 
-At this point, we think that the problem is not challenging enough for us… until we find out that the Phillips Curve can also be used to forecast future inflation! 🤯
+At this point, we think that the problem isn't challenging enough for us… until we find out that the Phillips Curve can also be used to forecast future inflation! 🤯
 
 𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} 𝚫inflation{% sub %}t-1{% /sub %} + β{% sub %}2{% /sub %} 𝚫inflation{% sub %}t-2{% /sub %} + β{% sub %}3{% /sub %} 𝚫inflation{% sub %}t-3{% /sub %} + β{% sub %}4{% /sub %} 𝚫inflation{% sub %}t-4{% /sub %} + β{% sub %}5{% /sub %} unemployment{% sub %}t-1{% /sub %} + β{% sub %}6{% /sub %} unemployment{% sub %}t-2{% /sub %} + β{% sub %}7{% /sub %} unemployment{% sub %}t-3{% /sub %} + β{% sub %}8{% /sub %} unemployment{% sub %}t-4{% /sub %}
 
@@ -215,4 +215,6 @@ So, we presented our projects to our lecturers with so many questions. One of ou
 
 Meanwhile, the other lecturer, who happens to be a professor, doesn’t bother with the omitted variable problem. However, he questions the quality of our regressions due to a lack of observations. He argues that a time-series model won’t perform very well without at least 60 observations, which is twice the number of samples we have on hand. One of the tricks to get around this, he explains, is to use interpolation to fill the missing data points between the range of our observations. However, it is not a recommended approach since there’s no guarantee that the interpolated data is close to the real values.
 
-We have so many questions, but too little time. We have to finish this project before the final exam, so we just present this to you as it is. Hopefully, you can learn a thing or two from this absolute chaotic experiment. But that’s exactly what we do here as a community! Student Tech Enthusiast takes a quite radical approach on learning, turning curiosity into an opportunity to learn something we would never learn in classes. Textbooks come with guardrails to help you understand many things, but the world out there is always more complicated than you think.
+We have so many questions, but too little time. We have to finish this project before the final exam, so we just present this to you as it is. Hopefully, you can learn a thing or two from this absolute chaotic experiment. But that’s exactly what we do here as a community! [Student Tech Enthusiast](/) takes a quite radical approach on learning, turning curiosity into an opportunity to learn something we would never learn in classes.
+
+See you next time, cheers! 😉
