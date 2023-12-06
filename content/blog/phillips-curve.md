@@ -134,7 +134,7 @@ The provided Stata syntax is a command for creating a two-dimensional graph, par
 
 ## Forecasting Inflation
 
-At this point, we think that the problem isn't challenging enough for us… until we find out that the Phillips Curve can also be used to forecast future inflation! 🤯
+At this point, we thought we need to level up our game a little bit. So, we did a little more digging and we found out that the Phillips Curve can also be used to forecast future inflation! 🤯
 
 𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} 𝚫inflation{% sub %}t-1{% /sub %} + β{% sub %}2{% /sub %} 𝚫inflation{% sub %}t-2{% /sub %} + β{% sub %}3{% /sub %} 𝚫inflation{% sub %}t-3{% /sub %} + β{% sub %}4{% /sub %} 𝚫inflation{% sub %}t-4{% /sub %} + β{% sub %}5{% /sub %} unemployment{% sub %}t-1{% /sub %} + β{% sub %}6{% /sub %} unemployment{% sub %}t-2{% /sub %} + β{% sub %}7{% /sub %} unemployment{% sub %}t-3{% /sub %} + β{% sub %}8{% /sub %} unemployment{% sub %}t-4{% /sub %}
 
