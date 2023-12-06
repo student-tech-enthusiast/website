@@ -23,7 +23,7 @@ After reading our textbooks, the simplest model we can find to prove this theory
 
 𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} unemployment{% sub %}t-1{% /sub %}
 
-We took this model from Jeff Wooldridge's _Introductory Econometrics 7th edition_ book chapter 10. Here, we want to estimate whether or not inflation is really correlated with unemployment. We’re not quite sure at this point why this model uses the first difference of inflation rather than the actual inflation. After we did some digging, one possible explanation we can come up with is that inflation tends to be not stationary, i.e. have a trend, but we’re not very confident about it.
+This model is called the _Static Phillips Curve_ model, and we took it from Jeff Wooldridge's _Introductory Econometrics 7th edition_ book chapter 10. Here, we want to estimate whether or not inflation is really correlated with unemployment. We’re not quite sure at this point why this model uses the first difference of inflation rather than the actual inflation. After we did some digging, one possible explanation we can come up with is that inflation tends to be not stationary, i.e. have a trend, but we’re not very confident about it.
 
 ### Preparing our data
 
@@ -207,7 +207,7 @@ line forecast_delta_inflation delta_inflation time, ytitle("Change in Inflation 
 
 ## Findings
 
-The more we dig into it, the more we realize we don’t know anything. Up to this point, we have no idea why the adjusted R-squared of the ADL(4, 4) model we use to forecast inflation is negative. We have never seen something like this before, so based on our current understanding, there is no easy way to interpret it.
+The more we dig into it, the more we realize we don’t know anything. Up to this point, we have no idea why the adjusted R-squared of the static Phillips Curve regression model is negative. We have never seen something like this before, so based on our current understanding, there is no easy way to interpret it.
 
 Another weird thing we found is that when we plot the data from BPS and World Bank side by side, the fluctuations are different, even when we use the same time span. We thought the World Bank collects the data from BPS, but it seems there’s something off here, and we have no clue.
 
