@@ -1,7 +1,7 @@
 ---
 external: false
 title: "A Time-Series Analysis of Inflation and Unemployment"
-description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
+description: "Does the Phillips Curve exists in Indonesia?"
 date: 2023-12-06
 ---
 
