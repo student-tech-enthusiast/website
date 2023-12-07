@@ -21,7 +21,7 @@ However, is it always true that inflation is negatively correlated with inflatio
 
 After reading our textbooks, the simplest model we can find to prove this theory is this:
 
-𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} unemployment{% sub %}t{% /sub %}
+𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} unemployment{% sub %}t{% /sub %} + u{% sub %}t{% /sub %}
 
 This model is called the _Static Phillips Curve_ model, and we took it from Jeff Wooldridge's _Introductory Econometrics 7th edition_ book chapter 10. Here, we want to estimate whether or not inflation is really correlated with unemployment. We’re not quite sure at this point why this model uses the first difference of inflation rather than the actual inflation. After we did some digging, one possible explanation we can come up with is that inflation tends to be not stationary, i.e. have a trend, but we’re not very confident about it.
 
@@ -136,7 +136,7 @@ The provided Stata syntax is a command for creating a two-dimensional graph, par
 
 At this point, we thought we needed to level up our game a little bit. So, we did a little more digging and we found out that the Phillips Curve can also be used to forecast future inflation! 🤯
 
-𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} 𝚫inflation{% sub %}t-1{% /sub %} + β{% sub %}2{% /sub %} 𝚫inflation{% sub %}t-2{% /sub %} + β{% sub %}3{% /sub %} 𝚫inflation{% sub %}t-3{% /sub %} + β{% sub %}4{% /sub %} 𝚫inflation{% sub %}t-4{% /sub %} + β{% sub %}5{% /sub %} unemployment{% sub %}t-1{% /sub %} + β{% sub %}6{% /sub %} unemployment{% sub %}t-2{% /sub %} + β{% sub %}7{% /sub %} unemployment{% sub %}t-3{% /sub %} + β{% sub %}8{% /sub %} unemployment{% sub %}t-4{% /sub %}
+𝚫inflation{% sub %}t{% /sub %} = β{% sub %}0{% /sub %} + β{% sub %}1{% /sub %} 𝚫inflation{% sub %}t-1{% /sub %} + β{% sub %}2{% /sub %} 𝚫inflation{% sub %}t-2{% /sub %} + β{% sub %}3{% /sub %} 𝚫inflation{% sub %}t-3{% /sub %} + β{% sub %}4{% /sub %} 𝚫inflation{% sub %}t-4{% /sub %} + β{% sub %}5{% /sub %} unemployment{% sub %}t-1{% /sub %} + β{% sub %}6{% /sub %} unemployment{% sub %}t-2{% /sub %} + β{% sub %}7{% /sub %} unemployment{% sub %}t-3{% /sub %} + β{% sub %}8{% /sub %} unemployment{% sub %}t-4{% /sub %} + u{% sub %}t{% /sub %}
 
 We took this model from Stock & Watson's _Introduction to Econometrics 3rd edition_ book chapter 15. This is called the autoregressive distributed lag model, or ADL in short. The idea is that the change in inflation at year t can be predicted using the lagged values of change in inflation and unemployment level.
 
@@ -144,7 +144,7 @@ We took this model from Stock & Watson's _Introduction to Econometrics 3rd editi
 regress delta_inflation L(1/4).delta_inflation L(1/4).unemployment
 ```
 
-The above command is used to perform linear regression with an autoregressive distributed lag (ADL) model to forecast inflation by accounting for the time distribution effect. The syntax involves `L(1/4)`, indicating that we divide it into 4 quarters, utilizing lag values from 1 to 4 (`L1.delta_inflation`, `L2.delta_inflation`, `L3.delta_inflation`, `L4.delta_inflation`) as predictors.
+The above command is used to perform linear regression with an autoregressive distributed lag (ADL) model to forecast inflation by accounting for the time distribution effect. The syntax involves `L(1/4)`, indicating that we include four lag values of `delta_inflation` and `unemployment` as the regressors.
 
 ```txt
       Source |       SS           df       MS      Number of obs   =        25
@@ -203,7 +203,7 @@ This function is used to create a line plot. We can visualize the predictions fr
 line forecast_delta_inflation delta_inflation time, ytitle("Change in Inflation (%)") xtitle("Time") legend(label(1 "Our forecast") label(2 "Change in Inflation")) title("ADL(4,4) Model")
 ```
 
-![adl model visualization graph](</images/phillips-curve/adl model bps.jpg>)
+![adl model visualization graph](</images/phillips-curve/adl model.jpg>)
 
 ## Findings
 
